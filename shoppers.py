@@ -47,8 +47,8 @@ class Item:
     
 # manual test from main() method
 def main():
-  item1 = "ABCD-1234", "Pencil", "1.10"
-  item2 = "CDEF-4567", "Binder", "3.55"
+  item1 = Item("ABCD-1234", "Pencil", "1.10")
+  item2 = Item("CDEF-4567", "Binder", "3.55")
   item1.print_item()
   item2.print_item()
   print(item1) # output from __str__
