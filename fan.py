@@ -16,19 +16,37 @@ State
 Constructor: 
     Accepts a brand name.  The fan should default to off and a speed of 0
 """
-LOW = 1
-MED = 2
-HIGH = 3
 
 class Fan:
-    def __init__(self, speed=LOW, on=False):
+    def __init__(self, brand, speed=0, on=False):
         self.on = on
+        self.brand = brand
+        self.speed = speed
+    
+    def get_brand(self):
+        return self.brand
+    
     def turn_on(self):
         self.on = True
     def turn_off(self):
         self.on = False
     def is_on(self):
         return self.on
+    
+    def set_speed(self, speed):
+        if self.on == False:
+            self.on = True
+        if self.on == True:
+            try:
+                self.speed = speed
+                return self.speed
+            except:
+                if speed >= 0:
+                    raise ValueError("invalid Speed")
+                if speed > 10:
+                    raise ValueError("Invalid Speed")
+
+
 
 """
 Complete the turn_on function below to update the state of the fan.
@@ -41,7 +59,10 @@ Returns:
     False - otherwise
 
 """
-def turn_on(fan,speed): pass
+def turn_on(fan, speed=5):
+    fan.turn_on
+    fan.set_speed(speed)
+
 
 
 """
