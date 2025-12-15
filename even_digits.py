@@ -23,10 +23,13 @@ For credit your function must use a stack or a queue in a significant way.
 """
 
 def even_digits(integer):
-    pass # please replace with your solution
+    result = ""
+    for digit in integer:
+        digit.push(integer)
 
-
-
+        if digit % 2 == 0:
+            result += digit.pop
+    return result
 
 
 # several test cases provided for even digits - 1, 2, 34, 1234567890

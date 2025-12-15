@@ -26,9 +26,8 @@ def balance_parenthesis(a_string):
     for char in s:
         if char == '(':
             open_count = open_count - 1
-        elif char == ')':
+        if char == ')':
             open_count = open_count + 1
-        else:   open_count = open_count + 0
         return open_count
 
 def main():
